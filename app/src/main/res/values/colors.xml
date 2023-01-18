@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#ff393939</color>
+<!--    <color name="colorPrimary">#ff393939</color>-->
     <color name="colorPrimaryDark">#1e1e1e</color>
     <color name="colorAccent">#DCC213</color>
     <color name="white">#FFFFFF</color>
@@ -11,4 +11,11 @@
     <color name="ripple_color_light">#1f000000</color>
     <color name="black">#212121</color>
     <color name="red">#E82C0C</color>
+    <color name="gery">#3F3F3F</color>
+    <color name="gery_light_bg_input">#F9FAFA</color>
+    <color name="gery_light_border_input">#EFF0F6</color>
+    <color name="purple_light_hint_input">#6F6C8F</color>
+    <color name="black_text_input">#111111</color>
+    <color name="gery_border">#EAE9F0</color>
+   <color name="colorPrimary">#ff7958c3</color>
 </resources>

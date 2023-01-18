@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradiant_background"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/imageView_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_done_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_orderRecieved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="تم استلام الطلب بواسطة"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/imageView_done"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_orderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="الشروق للمنتجات الغذائية "
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView_done" />
+
+    <Button
+        android:id="@+id/button_trackOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/curved_border_button"
+        android:backgroundTint="@color/purple_light_hint_input"
+        android:drawableStart="@drawable/ic_baseline_done_24"
+        android:text="تتبع الطلب"
+        app:layout_constraintBottom_toBottomOf="@id/textView_orderName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView_orderName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:text="فرع الابراهيمية"
+        android:textColor="@color/white"
+        app:drawableStartCompat="@android:drawable/ic_lock_idle_alarm"
+        app:layout_constraintStart_toStartOf="@id/textView_orderName"
+        app:layout_constraintTop_toBottomOf="@id/button_trackOrder" />
+</androidx.constraintlayout.widget.ConstraintLayout>

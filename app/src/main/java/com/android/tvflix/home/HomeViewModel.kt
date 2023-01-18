@@ -66,7 +66,7 @@ class HomeViewModel @Inject constructor(
         }
     }
 
-    fun heading(): String {
+    private fun heading(): String {
         return String.format(
             context.getString(R.string.popular_shows_airing_today),
             GetSchedulesUseCase.COUNTRY

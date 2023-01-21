@@ -21,7 +21,7 @@ jobs:
           java-version: '19'
           cache: gradle
       - name: Build with gradle
-         run: ./gradlew build --stacktrace # Execute gradle script to build project
+         run:./gradlew build --stacktrace # Execute gradle script to build project
   
   check-lint:
     runs-on: ubuntu-latest
@@ -33,7 +33,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-        name: Lint check
+      - name: run Lint Check
         run: ./gradlew lint # Execute gradle script to perform lint check   
         
       - name: Generate lint report
@@ -42,8 +42,7 @@ jobs:
           name: lint_report.html # Name of the artifact to be uploaded
           path: app/build/reports/lint-results-debug.html # Specifies the path where the artifact to be uploaded is located
         
-   unit-tests: #Defines another job called unit tests
-      name: 🧪 Unit Tests
+  unit-tests: 
       runs-on: ubuntu-latest
       steps:
 

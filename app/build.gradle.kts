@@ -1,3 +1,5 @@
+import com.android.tools.analytics.AnalyticsSettings.disable
+
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -112,6 +114,12 @@ android {
 
     kotlinOptions {
         jvmTarget = "11"
+    }
+    lint {
+        this.disable.addAll(listOf("JvmStaticProvidesInObjectDetector" , "FieldSiteTargetOnQualifierAnnotation",
+        "ModuleCompanionObjects" , "ModuleCompanionObjectsNotInModuleParent"))
+
+
     }
 
 }

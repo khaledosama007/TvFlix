@@ -21,7 +21,7 @@ object Deps {
         const val timber = "5.0.1"
         const val mockito_kotlin = "4.0.0"
         const val arch_core_testing = "2.1.0"
-        const val moshi = "1.12.0"
+        const val moshi = "1.13.0"
         const val coroutines = "1.5.2"
         const val truth = "1.1.3"
         const val annotation = "1.1.0"

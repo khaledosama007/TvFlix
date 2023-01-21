@@ -1,4 +1,5 @@
 apply plugin: 'checkstyle'
+apply plugin: "io.gitlab.arturbosch.detekt"               // detekt STEP1 applying plugin (detekt = kotlin code's static analyser)
 
 task checkstyle(type: Checkstyle) {
     description 'Check code standard'
@@ -15,5 +16,23 @@ task checkstyle(type: Checkstyle) {
         xml.enabled = true
         html.enabled = true
         html.destination file("$project.buildDir/outputs/checkstyle/checkstyle.html")
+    }
+}
+
+
+detekt {
+    parallel = true
+    allRules = true
+    ignoreFailures = true
+    debug = true
+}
+
+// detekt STEP3 gradle task configuration
+tasks.named("detekt").configure {
+    reports {
+        html.required.set(true)
+        sarif.required.set(false)
+        xml.required.set(false)
+        txt.required.set(false)
     }
 }

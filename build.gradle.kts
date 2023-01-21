@@ -1,9 +1,17 @@
+import com.google.wireless.android.sdk.stats.GradleBuildProject.PluginType
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
+//    plugins{
+//        id("io.gitlab.arturbosch.detekt").version("1.20.0-RC1").apply(false)
+//    }
     repositories {
         google()
         gradlePluginPortal()
         mavenCentral()
+        maven {
+            url = uri("https://plugins.gradle.org/m2/")
+        }
     }
     dependencies {
         classpath(Deps.AppPlugins.android_gradle)
@@ -13,8 +21,9 @@ buildscript {
         classpath(Deps.AppPlugins.Firebase.crashlytics)
         classpath(Deps.AppPlugins.Firebase.performance)
         classpath(Deps.AppPlugins.Firebase.app_distribution)
-        classpath("com.android.tools.build:gradle:7.0.4")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10")
+        classpath("com.android.tools.build:gradle:7.3.1")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10")
+        classpath(Deps.AppPlugins.Github.github_analysis)
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle.kts files
     }
@@ -24,6 +33,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        gradlePluginPortal()
     }
     configurations.all {
         resolutionStrategy.eachDependency {

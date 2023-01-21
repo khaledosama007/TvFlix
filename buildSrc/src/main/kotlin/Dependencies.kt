@@ -1,6 +1,6 @@
 object Deps {
     object Versions {
-        const val compile_sdk = 31
+        const val compile_sdk = 33
         const val min_sdk = 23
         const val target_sdk = 30
         const val app_version_code = 107
@@ -16,8 +16,8 @@ object Deps {
         const val okhttp = "4.9.3"
         const val retrofit = "2.9.0"
         const val paging = "3.1.0"
-        const val room = "2.4.0"
-        const val kotlin = "1.5.31"
+        const val room = "2.5.0"
+        const val kotlin = "1.7.10"
         const val timber = "5.0.1"
         const val mockito_kotlin = "4.0.0"
         const val arch_core_testing = "2.1.0"
@@ -35,7 +35,7 @@ object Deps {
         const val robolectric = "4.6"
         const val firebase_bom = "29.0.2"
         const val firebase_crashlytics_plugin = "2.8.1"
-        const val firebase_performance_plugin = "1.4.0"
+        const val firebase_performance_plugin = "1.4.1"
         const val gms_version = "4.3.10"
         const val app_distribution = "2.2.0"
     }
@@ -55,6 +55,9 @@ object Deps {
         const val kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
         const val hilt = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}"
         const val gms = "com.google.gms:google-services:${Versions.gms_version}"
+        object Github {
+            const val github_analysis = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.22.0"
+        }
     }
 
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
@@ -172,4 +175,5 @@ object Deps {
         const val analytics = "com.google.firebase:firebase-analytics-ktx"
         const val remote_config = "com.google.firebase:firebase-config-ktx"
     }
+
 }

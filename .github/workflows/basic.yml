@@ -1,5 +1,5 @@
 #.github/workflows/basic.yaml
-name: task - validate commit on master
+name: My First CI/CD 
 on:
   push:
     branches: [ master ]
@@ -21,7 +21,14 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: gradle
-          
+      - name: Check lint        
+        if: always()        
+        run: ./gradlew lint
+        
+      - name: Run Unit Tests
+        if: always()        
+        run: ./gradlew testDebugUnitTest
+        
       - name: Generate AAR and APK files
         if: always()
         run: ./gradlew assembleDebug
@@ -34,3 +41,21 @@ jobs:
           path: |
             app/build/outputs/apk/debug/app-debug.apk
             dog_network/build/outputs/aar
+            
+      - name: CodeAnalysis via  detekt
+        run: ./gradlew detekt
+
+      - name: Upload detekt results
+        uses: actions/upload-artifact@v2
+        with:
+          name: detekt_results
+          path:app/build/reports/detekt
+            
+      - name: CodeAnalysis via  checkstyle
+        run: ./gradlew checkstyle
+
+      - name: Upload checkstyle results
+        uses: actions/upload-artifact@v2
+        with:
+          name: checkstyle_results
+          path: app/build/reports/checkstyle      

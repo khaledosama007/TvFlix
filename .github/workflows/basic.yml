@@ -49,7 +49,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: detekt_results
-          path:app/build/reports/detekt
+          path: app/build/reports/detekt
             
       - name: CodeAnalysis via  checkstyle
         run: ./gradlew checkstyle

@@ -45,6 +45,7 @@ jobs:
         
   unit-tests: #Defines another job called unit tests
       name: 🧪 Unit Tests
+      needs: [ check-lint ]
       runs-on: ubuntu-latest
       steps:
 

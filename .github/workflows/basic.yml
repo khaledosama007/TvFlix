@@ -20,7 +20,7 @@ jobs:
         with:
           java-version: '19'
           distribution: 'temurin'
-          cache: gradle
+  
       - name: Build with gradle
         run: ./gradlew build --stacktrace # Execute gradle script to build project
   

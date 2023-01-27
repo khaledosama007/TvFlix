@@ -22,9 +22,9 @@ jobs:
           distribution: 'temurin'
   
       - name: Build with gradle
-        run: ./gradlew build --stacktrace # Execute gradle script to build project
+        run: ./gradlew assemble --stacktrace # Execute gradle script to build project
   
-  check-lint:
+  Check-Lint:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -45,7 +45,7 @@ jobs:
         
   unit-tests: #Defines another job called unit tests
       name: 🧪 Unit Tests
-      needs: [ check-lint ]
+      needs: [ Check-Lint ]
       runs-on: ubuntu-latest
       steps:
 

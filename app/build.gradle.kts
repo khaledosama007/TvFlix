@@ -21,6 +21,9 @@ apply {
 android {
     compileSdk = Deps.Versions.compile_sdk
 
+    defaultConfig {
+        multiDexEnabled = true
+    }
     buildFeatures {
         viewBinding = true
         dataBinding = true

@@ -42,7 +42,7 @@ object Deps {
 
     object AppPlugins {
         const val android_gradle = "com.android.tools.build:gradle:${Versions.android_plugin}"
-
+        const val multi_dex = "com.android.support:multidex:2.0.1"
         object Firebase {
             const val crashlytics =
                 "com.google.firebase:firebase-crashlytics-gradle:${Versions.firebase_crashlytics_plugin}"
@@ -56,7 +56,7 @@ object Deps {
         const val hilt = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}"
         const val gms = "com.google.gms:google-services:${Versions.gms_version}"
         object Github {
-            const val github_analysis = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.22.0"
+            const val github_analysis = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.21.0"
         }
     }
 

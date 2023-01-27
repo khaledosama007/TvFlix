@@ -22,10 +22,12 @@ task checkstyle(type: Checkstyle) {
 
 detekt {
     parallel = true
-    allRules = true
+    allRules = false
     ignoreFailures = true
-    debug = true
+    debug = false
+    buildUponDefaultConfig = true
 }
+
 
 // detekt STEP3 gradle task configuration
 tasks.named("detekt").configure {
